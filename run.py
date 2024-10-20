@@ -6,8 +6,15 @@ HIT_CHAR = 'x'
 MISS_CHAR = 'o'
 BLANK_CHAR = '.'
 VERTICAL = 'v'
-HORIZONTAL = 'h' 
-{
+HORIZONTAL = 'h'
+MAX_MISSES = 20
+SHIP_SIZES = {
+    "carrier": 5,
+    "battleship": 4,
+    "shadwell": 3,
+    "submarine": 3,
+    "destroyer": 2 
+
     
 }
 
