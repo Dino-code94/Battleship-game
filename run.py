@@ -55,6 +55,13 @@ def play_battleship():
         game = Game()
         game.display_board()
 
+    while not game.is_complete():
+            pos = game.get_guess()
+            result = game.check_guess()
+            game.update_game(result, pos)
+            game.display_board()
+    
+    game_over = end_program()
 
     
 
