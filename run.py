@@ -39,3 +39,20 @@ def get_random_position():
 
     return (row_choice, col_choice)
 
+def play_battleship():
+    """Controls flow of Battleship games including display of
+    welcome and goodbye messages.
+
+    :return: None
+    """
+
+
+
+    
+
+
+    
+
+
+   
+
