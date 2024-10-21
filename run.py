@@ -46,6 +46,14 @@ def play_battleship():
     :return: None
     """
 
+    print("Let's Play Battleship!\n")
+
+    game_ower = False
+
+    while not game_ower:
+
+        game = Game()
+        game.display_board()
 
 
     
