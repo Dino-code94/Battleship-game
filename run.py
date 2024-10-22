@@ -103,3 +103,7 @@ class Game:
         self.board = []
         self.initialize_board()
         self.create_and_place_ships()
+
+    def update_game(self, guess_status, position):
+
+        row, column = position
