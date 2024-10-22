@@ -134,4 +134,4 @@ class Game:
 
         return False
 
-        
+    def check_guess(self, position):
