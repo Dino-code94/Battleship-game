@@ -65,3 +65,10 @@ def play_battleship():
 
 print("Goodbye.")  
 
+class Ship:
+     def __init__(self, name, start_position, orientation):
+
+        self.name = name
+        num_positions = SHIP_SIZES[name]
+        self.positions = {}
+        self.sunk = False
