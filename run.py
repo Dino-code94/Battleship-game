@@ -127,4 +127,11 @@ class Game:
 
         for ship in self.ships:
             ships_sunk.append(ship.sunk)
+
+        if ships_sunk == ([True] * len(SHIP_SIZES)):
+            print("YOU WIN!")
+            return True
+
+        return False
+
         
