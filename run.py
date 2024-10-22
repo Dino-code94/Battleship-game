@@ -123,4 +123,8 @@ class Game:
             print("SORRY! NO GUESSES LEFT.")
             return True
 
+            ships_sunk = []
+
+        for ship in self.ships:
+            ships_sunk.append(ship.sunk)
         
