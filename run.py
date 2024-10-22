@@ -81,3 +81,13 @@ class Ship:
             elif orientation == HORIZONTAL:
                 vertical_position, horizontal_position = start_position
                 self.positions[(vertical_position, horizontal_position + pos)] = False
+
+class Game:
+
+
+    _ship_types = ["carrier", "battleship", "shadwell", "submarine", "destroyer"]
+
+    def display_board(self):
+
+        print()
+        
