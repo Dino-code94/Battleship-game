@@ -90,4 +90,7 @@ class Game:
     def display_board(self):
 
         print()
-        
+        print("  " + ' '.join('{}'.format(i) for i in range(len(self.board))))
+        for row_label in self.board.keys():
+            print('{} '.format(row_label) + ' '.join(self.board[row_label]))
+        print()
