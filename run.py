@@ -107,3 +107,12 @@ class Game:
     def update_game(self, guess_status, position):
 
         row, column = position
+
+        if guess_status == True and self.board[row][column] == BLANK_CHAR:
+            self.board[row][column] = HIT_CHAR
+
+        elif guess_status == False and self.board[row][column] ==BLANK_CHAR:
+            self.board[row][column] = MISS_CHAR
+
+        if guess_status == False:
+            self-guesses.append(position)
