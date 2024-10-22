@@ -72,3 +72,12 @@ class Ship:
         num_positions = SHIP_SIZES[name]
         self.positions = {}
         self.sunk = False
+
+        for pos in range(num_positions):
+            if orientation == VERTICAL:
+                vertical_position, horizontal_position = start_position
+                self.positions[(chr(ord(vertical_position) + pos), horizontal_position)] = False
+
+            elif orientation == HORIZONTAL:
+                vertical_position, horizontal_position = start_position
+                self.positions[(vertical_position, horizontal_position + pos)] = False
