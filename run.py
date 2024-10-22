@@ -135,3 +135,14 @@ class Game:
         return False
 
     def check_guess(self, position):
+
+        for ship in self.ships:
+            for occupied_position in list(ship.positions.keys()):
+
+                if occupied_position == position and ship.positions[occupied_position] == False:
+                    ship.positions[occupied_position] = True
+                    if list(ship.positions.values()) == ([True] * len(ship.positions)):
+                        ship.sunk = True
+                        print("You sunk the {}!".format(ship.name))
+                    return True
+        return False
