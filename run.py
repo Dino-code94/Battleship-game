@@ -57,7 +57,7 @@ def play_battleship():
 
     while not game.is_complete():
             pos = game.get_guess()
-            result = game.check_guess()
+            result = game.check_guess(pos)
             game.update_game(result, pos)
             game.display_board()
     
@@ -116,3 +116,11 @@ class Game:
 
         if guess_status == False:
             self-guesses.append(position)
+
+    def is_complete(self):
+
+        if len(self.guesses) == self.max_misses:
+            print("SORRY! NO GUESSES LEFT.")
+            return True
+
+        
