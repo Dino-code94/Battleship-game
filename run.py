@@ -63,11 +63,5 @@ def play_battleship():
     
     game_over = end_program()
 
-    
-
-
-    
-
-
-   
+print("Goodbye.")  
 
