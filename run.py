@@ -94,3 +94,12 @@ class Game:
         for row_label in self.board.keys():
             print('{} '.format(row_label) + ' '.join(self.board[row_label]))
         print()
+
+    def __init__(self, max_misses = MAX_MISSES):
+
+        self.max_misses = MAX_MISSES
+        self.ships = []
+        self.guesses = []
+        self.board = []
+        self.initialize_board()
+        self.create_and_place_ships()
