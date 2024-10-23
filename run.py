@@ -162,3 +162,10 @@ class Game:
             user_row_input = input("Enter a row: ")
             if min_row_ord_allowed <= ord(user_row_input) <= max_row_ord_allowed:
                 row_checker = True
+
+        while column_checker == False:
+            user_column_input = int(input("Enter a column: "))
+            if min_column_allowed <= user_column_input <= max_column_allowed:
+                column_checker = True
+
+        return (user_row_input, user_column_input)
