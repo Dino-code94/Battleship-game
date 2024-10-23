@@ -207,3 +207,10 @@ class Game:
         current_ship_positions = []
 
         start_position_letter, start_position_number = start_position
+
+        for num in range(ship_size):
+            if orientation == VERTICAL:
+                current_ship_positions.append((chr(ord(start_position_letter) + num), start_position_number))
+
+            elif orientation == HORIZONTAL:
+                current_ship_positions.append((start_position_letter, start_position_number + num))       
