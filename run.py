@@ -229,4 +229,18 @@ class Game:
                     return True
 
 
-        return False      
+        return False
+
+    def in_bounds(self, start_position, ship_size, orientation):
+
+        start_position_letter, start_position_number = start_position
+
+        if orientation == VERTICAL:
+            if (ord(start_position_letter) + ship_size) > ord(MAX_ROW_LABEL):
+                return False
+
+        elif orientation == HORIZONTAL:
+            if (start_position_number + ship_size) > (NUM_COLS - COL_IDX):
+                return False
+
+        return True
