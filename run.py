@@ -244,3 +244,13 @@ class Game:
                 return False
 
         return True
+
+    def initialize_board(self):
+
+        alphabets = []
+
+        for num in range(NUM_COLS):
+            alphabets.append(chr(ord(MIN_ROW_LABEL) + num))
+
+        for letter in alphabets:
+            self.board[letter] = ["."] * NUM_COLS
