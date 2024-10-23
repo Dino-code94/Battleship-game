@@ -146,3 +146,14 @@ class Game:
                         print("You sunk the {}!".format(ship.name))
                     return True
         return False
+
+    def get_guess(self):
+        
+        min_row_ord_allowed = ord(MIN_ROW_LABEL)
+        max_row_ord_allowed = ord(MAX_ROW_LABEL)
+
+        min_column_allowed = ROW_IDX
+        max_column_allowed = NUM_COLS - COL_IDX
+
+        row_checker = False
+        column_checker = False
