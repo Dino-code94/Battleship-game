@@ -203,3 +203,7 @@ class Game:
             return None
 
     def overlaps_ship(self, start_position, ship_size, orientation):
+
+        current_ship_positions = []
+
+        start_position_letter, start_position_number = start_position
