@@ -169,3 +169,16 @@ class Game:
                 column_checker = True
 
         return (user_row_input, user_column_input)
+
+    def create_and_place_ships(self):
+
+        for ship_name in self._ship_types:
+            starting_position = get_random_position()
+            size_ship = SHIP_SIZES[ship_name]
+            orientation = self.place_ship(starting_position, size_ship)
+            while orientation == None:
+                starting_position = get_random_position()
+                orientation = self.place_ship(starting_position, size_ship)
+
+            ship = Ship(ship_name, starting_position, orientation)
+            self.ships.append(ship)        
