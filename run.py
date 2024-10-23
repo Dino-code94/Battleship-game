@@ -213,4 +213,20 @@ class Game:
                 current_ship_positions.append((chr(ord(start_position_letter) + num), start_position_number))
 
             elif orientation == HORIZONTAL:
-                current_ship_positions.append((start_position_letter, start_position_number + num))       
+                current_ship_positions.append((start_position_letter, start_position_number + num)) 
+
+        already_taken_positions = []
+
+        for ship in self.ships:
+            for position in list(ship.positions.keys()):
+                already_taken_positions.append(position)
+
+
+        for position1 in current_ship_positions:
+            for position2 in already_taken_positions:
+
+                if position1 == position2:
+                    return True
+
+
+        return False      
