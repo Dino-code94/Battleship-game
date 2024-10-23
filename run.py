@@ -254,3 +254,7 @@ class Game:
 
         for letter in alphabets:
             self.board[letter] = ["."] * NUM_COLS
+
+    def end_program():
+
+         user_input = input("Play again (Y/N)? ")
