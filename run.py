@@ -201,3 +201,5 @@ class Game:
 
         else:
             return None
+
+    def overlaps_ship(self, start_position, ship_size, orientation):
