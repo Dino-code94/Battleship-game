@@ -181,4 +181,23 @@ class Game:
                 orientation = self.place_ship(starting_position, size_ship)
 
             ship = Ship(ship_name, starting_position, orientation)
-            self.ships.append(ship)        
+            self.ships.append(ship)
+
+    def place_ship(self, start_position, ship_size):
+
+        horizontal_in_bounds = self.in_bounds(start_position, ship_size, HORIZONTAL)
+
+        horizontal_overlaps = self.overlaps_ship(start_position, ship_size, HORIZONTAL)
+
+        vertical_in_bounds = self.in_bounds(start_position, ship_size, VERTICAL)
+
+        vertical_overlaps = self.overlaps_ship(start_position, ship_size, VERTICAL)
+
+        if horizontal_in_bounds == True and horizontal_overlaps == False:
+            return HORIZONTAL
+
+        elif vertical_in_bounds == True and vertical_overlaps == False:
+            return VERTICAL
+
+        else:
+            return None
