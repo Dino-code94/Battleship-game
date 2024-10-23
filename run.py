@@ -269,3 +269,11 @@ class Game:
 
     if user_input == "N" or user_input == "n":
         return True
+
+    def main():
+
+        play_battleship()
+
+
+    if __name__ == "__main__":
+        main()
