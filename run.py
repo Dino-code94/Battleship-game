@@ -258,3 +258,14 @@ class Game:
     def end_program():
 
          user_input = input("Play again (Y/N)? ")
+
+         allowed_inputs= "yYnN"
+
+    while not user_input in allowed_inputs:
+        user_input = input("Play again (Y/N)? ")
+
+    if user_input == "Y" or user_input == "y":
+        return False
+
+    if user_input == "N" or user_input == "n":
+        return True
