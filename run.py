@@ -157,3 +157,8 @@ class Game:
 
         row_checker = False
         column_checker = False
+
+        while row_checker ==  False:
+            user_row_input = input("Enter a row: ")
+            if min_row_ord_allowed <= ord(user_row_input) <= max_row_ord_allowed:
+                row_checker = True
